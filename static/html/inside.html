@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Inside View</title>
+
+  <script type="module">
+    console.log("test");
+    import { sdk } from 'https://esm.sh/@farcaster/frame-sdk';
+
+    await sdk.actions.ready();
+  </script>
+  <meta name="fc:frame" content='{
+    "version":"next",
+    "imageUrl":"https://insideapp.tech/static/img/insideImage.png",
+    "button":{
+      "title":"Get Inside",
+      "action":{
+        "type":"launch_frame",
+        "url":"{{ embed_url }}",
+        "name":"Inside",
+        "splashImageUrl":"https://insideapp.tech/static/img/splashImage.png",
+        "splashBackgroundColor":"#ffffff"
+      }
+    }
+  }'/>
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <link rel="icon" href="/static/img/logo.png" type="image/png" />
+
+  <style>
+    @font-face {
+      font-family: 'Cy Grotesk Grand';
+      src: url('/static/fonts/cy-grotesk-grand.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'Cy Grotesk Grand Med';
+      src: url('/static/fonts/cy-grotesk-grand2.ttf') format('truetype');
+    }
+  </style>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      cursor: default !important;
+    }
+    html, body {
+      width: 100%; height: 100%;
+      font-family: 'Old Standard TT', serif;
+      background: #ffffff;
+    }
+    #app { max-width: 370px; margin: auto; padding: 1rem; text-align: center; }
+
+    .card {
+      position: relative;
+      background: #fff;
+      border-radius: 30px;
+      padding: 1rem 1.5rem 1rem 1.5rem;
+      box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+    }
+
+    .card-content {
+      position: relative;
+      z-index: 1;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    }
+    .card-content.blur {
+      filter: blur(8px);
+      pointer-events: none;
+    }
+
+    .card p {
+      font-family: 'Old Standard TT', serif;
+      font-size: 1.3rem;
+      color: #000;
+      line-height: 1.4;
+      opacity: 0.70;
+      text-align: center;
+      margin: 0;
+    }
+
+    .overlay {
+      position: absolute;
+      top: calc(50% - 20px);
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 2;
+      pointer-events: auto;
+    }
+
+    .overlay img {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      margin-bottom: 0.0rem;
+      opacity: 0.75;
+    }
+    .overlay .btn {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      margin-top: 1rem;
+      background: rgba(0,0,0,0.85);
+      color: #fff;
+      font-family: 'Cy Grotesk Grand Med', sans-serif;
+      font-size: 1.7rem;
+      text-align: center;
+      padding: 0.3rem;
+      border: none;
+      border-radius: 100px;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .btn:active {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="card">
+      <div id="card-content" class="card-content blur">
+        <p id="card-text">With Inside, you can create a paid message and share it, earning money from each purchase of the secret information by others.</p>
+      </div>
+      <div id="overlay" class="overlay">
+        <img src="/static/img/lock.png" alt="Locked" />
+        <button id="get" class="btn">Get Inside</button>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/static/js/inside.js"></script>
+</body>
+</html>

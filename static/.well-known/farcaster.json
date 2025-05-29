@@ -1,0 +1,15 @@
+{
+  "name": "Inside",
+  "version": "0.1.0",
+  "description": "Paid secret messages in Farcaster",
+  "entrypoint": "/",
+  "icon": "/static/img/logo.png",
+  "splashImageUrl": "/static/img/splashImage.png",
+  "splashBackgroundColor": "#ffffff",
+  "routes": [
+    { "path": "/",          "title": "Create Inside" },
+    { "path": "/welcome",   "title": "Welcome" },
+    { "path": "/success",   "title": "Success" },
+    { "path": "/inside",    "title": "Inside" }
+  ]
+}

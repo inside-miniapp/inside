@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>New Inside</title>
+  <script type="module">
+    console.log("test");
+    import { sdk } from 'https://esm.sh/@farcaster/frame-sdk';
+
+    await sdk.actions.ready();
+  </script>
+  <meta name="fc:frame" content='{
+    "version":"next",
+    "imageUrl":"https://insideapp.tech/static/img/logoImage.png",
+    "button":{
+      "title":"Give Inside",
+      "action":{
+        "type":"launch_frame",
+        "url":"https://insideapp.tech/",
+        "name":"Inside",
+        "splashImageUrl":"https://insideapp.tech/static/img/splashImage.png",
+        "splashBackgroundColor":"#ffffff"
+      }
+    }
+  }'/>
+
+  <link rel="icon" href="/static/img/logo.png" type="image/png" />
+
+  <style>
+    @font-face {
+      font-family: 'Cy Grotesk Grand';
+      src: url('/static/fonts/cy-grotesk-grand.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Cy Grotesk Grand Med';
+      src: url('/static/fonts/cy-grotesk-grand2.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      cursor: default !important;
+    }
+    html, body { width: 100%; height: 100%; font-family: 'Old Standard TT', serif; background: #ffffff; }
+    #app { max-width: 370px; margin: auto; padding: 1rem; }
+
+    .header {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    .header .icon {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 0.0rem;
+    }
+    .header h1 {
+      font-family: 'Cy Grotesk Grand', sans-serif;
+      font-size: 1.5rem;
+      color: #000;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 30px;
+      padding: 1rem 0.5rem 0.2rem 0.5rem;
+      box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+    }
+
+    textarea,
+    input.input-text {
+      font-family: 'Old Standard TT', serif;
+      border: 1px solid #00000036;
+      font-size: 1.1rem;
+      padding: 0.5rem;
+      width: 100%;
+      color: #000;
+      border-radius: 20px;
+      transition: opacity 0.2s, font-style 0.2s;
+      outline: none;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    textarea { height: 100px; resize: none; }
+    input.input-text { height: 40px; margin-top: 0.5rem; }
+
+    textarea::placeholder,
+    input::placeholder {
+      font-style: italic;
+      opacity: 0.75;
+    }
+    textarea:placeholder-shown,
+    input:placeholder-shown {
+      font-style: italic;
+      opacity: 0.75;
+    }
+    textarea:not(:placeholder-shown),
+    input:not(:placeholder-shown) {
+      font-style: normal;
+      opacity: 1;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-size: 1.3rem;
+      color: #000;
+      opacity: 0.70;
+      font-family: 'Old Standard TT', serif;
+    }
+
+    .price-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0.5rem;
+    }
+    .price-sign {
+      font-family: 'Open Sans', sans-serif;
+      font-style: italic;
+      font-size: 2rem;
+      opacity: 0.75;
+      margin-right: 0.25rem;
+    }
+    .input-price {
+      width: 45px;
+      height: 40px;
+      margin: 0;
+      border: 1px solid #00000060;
+      border-radius: 14px;
+      padding: 0.3rem;
+      font-size: 1.5rem;
+      color: #000;
+      line-height: 1;
+      padding-top: 0.2rem;
+      padding-bottom: 0.2rem;
+      text-align: left;
+      font-family: 'Old Standard TT', serif;
+      transition: opacity 0.2s, font-style 0.2s;
+      outline: none;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .input-price::placeholder {
+      font-style: italic;
+      opacity: 0.75;
+    }
+    .input-price:placeholder-shown {
+      font-style: italic;
+      opacity: 0.75;
+    }
+    .input-price:not(:placeholder-shown) {
+      font-style: normal;
+      opacity: 1;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      margin-top: 1rem;
+      background: rgba(0,0,0,0.85);
+      color: #fff;
+      font-family: 'Cy Grotesk Grand Med', sans-serif;
+      font-size: 1.7rem;
+      text-align: center;
+      padding: 0.3rem;
+      border: none;
+      border-radius: 100px;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .btn:active { opacity: 0.9; }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div class="header">
+      <img src="/static/img/hi.png" alt="Hi" class="icon" />
+      <h1>New Inside</h1>
+    </div>
+
+    <div class="card">
+      <textarea id="text" placeholder="your inside here..." spellcheck="false" autocomplete="off"></textarea>
+      <input id="addr" class="input-text" type="text" placeholder="your address here..." maxlength="42" spellcheck="false" autocomplete="off"/>
+      <label>Price:</label>
+      <div class="price-container">
+        <span class="price-sign">$</span>
+        <input id="price" class="input-price" type="text" placeholder="1.0" maxlength="3" spellcheck="false" autocomplete="off"/>
+      </div>
+      <button id="create" class="btn">Give Inside</button>
+      <div id="link"></div>
+    </div>
+  </div>
+
+  <script src="/static/js/create.js"></script>
+</body>
+</html>

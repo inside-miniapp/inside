@@ -1,0 +1,86 @@
+INSIDE – Terms of Use & Privacy Policy
+
+1. Introduction
+Welcome to Inside, a decentralized mini-app for sharing and purchasing exclusive information ("insides"). By using Inside, you agree to these Terms of Use and the Privacy Policy. If you do not agree, do not use the platform.
+
+2. How Inside Works
+Creators can publish hidden content ("insides") and set a price in $USDC.
+
+Purchasers can unlock the content by paying the specified price.
+
+90% of the payment goes directly to the creator’s wallet, and 10% goes to the platform's address.
+
+All payments and splits are processed on the Base blockchain via smart contracts.
+
+Content is stored in encrypted form; the platform does not have access to plaintext data.
+
+3. No Moderation or Guarantee
+Inside is an unmoderated platform. We do not verify or endorse any content.
+
+Users must exercise caution and due diligence when buying or posting insides.
+
+We provide no guarantees about the quality, truthfulness, accuracy, legality, or usefulness of any content published on the platform.
+
+4. No Refunds
+All purchases are final.
+
+We do not offer refunds under any circumstances, even if the content is misleading or unsatisfactory.
+
+The smart contract splits payments immediately upon purchase.
+
+5. Prohibited Use
+Users must not:
+
+Sell fake, misleading, fraudulent, harmful, or illegal content.
+
+Post or distribute stolen or confidential information.
+
+Publish pornographic, hateful, violent, or dangerous content.
+
+Violate any local, national, or international laws.
+
+Violators may be banned or reported to legal authorities, and their funds may be permanently lost.
+
+6. No Redistribution
+Purchased insides are for personal use only.
+
+Sharing, reselling, copying, or publishing any inside without permission is strictly forbidden.
+
+Violations of this rule may result in legal consequences and being permanently banned from the platform.
+
+7. Responsibility and Disclaimer
+You use Inside at your own risk.
+
+Inside is provided "as is" without warranties of any kind.
+
+We do not accept any liability for loss of funds, data, or access to content.
+
+The platform is non-custodial: you are responsible for your wallet and private keys.
+
+If you lose your wallet, access to purchased content is permanently lost.
+
+8. No Financial Advice
+Inside is not a financial advisor, investment platform, or consultancy service.
+
+Any content shared by creators on the platform does not constitute financial, investment, legal, or tax advice.
+
+Users should not make investment or financial decisions based solely on information obtained through Inside.
+
+We do not take responsibility for any losses or damages resulting from decisions made based on purchased or published content.
+
+9. Privacy and Data
+We do not collect personal data beyond your public wallet address.
+
+Content you publish is encrypted and stored securely; only you and the purchaser can decrypt it.
+
+We may collect anonymized usage data (e.g., number of insides posted or purchased) for analytics and platform improvement.
+
+10. Blockchain Transparency
+All transactions are public and visible on the blockchain.
+
+The platform has no access to reverse, censor, or modify blockchain data.
+
+11. Changes to Terms
+These Terms may be updated from time to time.
+
+Continued use of Inside constitutes your acceptance of any updated Terms.

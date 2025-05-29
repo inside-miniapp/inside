@@ -1,0 +1,9 @@
+{
+  "name": "Inside",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "icons": [
+    { "src": "/static/img/splashImage.png", "sizes": "200x200", "type": "image/png" }
+  ]
+}

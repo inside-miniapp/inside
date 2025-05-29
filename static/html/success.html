@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Success!</title>
+  <link rel="icon" href="/static/img/logo.png" type="image/png" />
+
+  <style>
+    @font-face {
+      font-family: 'Cy Grotesk Grand';
+      src: url('/static/fonts/cy-grotesk-grand.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'Cy Grotesk Grand Med';
+      src: url('/static/fonts/cy-grotesk-grand2.ttf') format('truetype');
+    }
+  </style>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      cursor: default !important;
+    }
+    html, body {
+      width: 100%; height: 100%;
+      font-family: 'Old Standard TT', serif;
+      background: #ffffff;
+    }
+    #app { max-width: 370px; margin: auto; padding: 1rem; }
+
+    .header {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    .header .icon {
+      width: 40px; height: 40px;
+      margin-bottom: 0.25rem;
+    }
+    .header h1 {
+      font-family: 'Cy Grotesk Grand', sans-serif;
+      font-size: 1.5rem;
+      color: #000;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 30px;
+      padding: 1rem 0.5rem 0.2rem 0.5rem;
+      box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+    }
+
+    .card p {
+      font-family: 'Old Standard TT', serif;
+      font-size: 1.3rem;
+      color: #000;
+      line-height: 1.4;
+      opacity: 0.70;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      margin-top: 1rem;
+      background: rgba(0,0,0,0.85);
+      color: #fff;
+      font-family: 'Cy Grotesk Grand Med', sans-serif;
+      font-size: 1.7rem;
+      text-align: center;
+      padding: 0.3rem;
+      border: none;
+      border-radius: 100px;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .btn:active { opacity: 0.7; }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="header">
+      <img src="/static/img/like.png" alt="Hi" class="icon" />
+      <h1>Inside is ready</h1>
+    </div>
+    <div class="card">
+      <p>
+        The link has been copied, paste it into a cast.
+      </p>
+      <button id="copy" class="btn">Copy</button>
+    </div>
+  </div>
+  <script src="/static/js/success.js"></script>
+</body>
+</html>
