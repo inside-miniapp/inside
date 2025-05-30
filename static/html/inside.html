@@ -11,6 +11,26 @@
 
     await sdk.actions.ready();
   </script>
+
+  <script type="module">
+    import { createConfig, configureChains, base } from 'https://esm.sh/wagmi?bundle';
+    import { publicProvider } from 'https://esm.sh/wagmi/providers/public?bundle';
+    import { InjectedConnector } from 'https://esm.sh/wagmi/connectors/injected?bundle';
+
+    const { chains, publicClient, webSocketPublicClient } = configureChains(
+      [ base ],
+      [ publicProvider() ]
+    );
+
+    window.wagmiConfig = createConfig({
+      autoConnect: true,
+      connectors:  [ new InjectedConnector({ chains }) ],
+      publicClient,
+      webSocketPublicClient
+    });
+  </script>
+
+
   <meta name="fc:frame" content='{
     "version":"next",
     "imageUrl":"https://insideapp.tech/static/img/insideImage.png",
